@@ -1,2 +1,36 @@
-@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
-@import "https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin-ext";
+@import "http://mutfak.freecluster.eu/vendor/files/global/css/main.css";
+div.landing-cover {
+  z-index: -10;
+  position: fixed;
+  top: 42px;
+  left: 0px;
+  right: 0px;
+  height: 350px;
+  background: #5e0f6d;
+  color: #FFFFFF;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+  font-family: 'Ubuntu Condensed', sans-serif; }
+  div.landing-cover div.container {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 680px; }
+    div.landing-cover div.container div.logo h1 {
+      line-height: 80px;
+      font-size: 100px; }
+
+div.landing-container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+  margin-top: 360px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  height: 60px; }
+  div.landing-container div.form-group {
+    margin: 10px; }
+
+/*# sourceMappingURL=style.css.map */
