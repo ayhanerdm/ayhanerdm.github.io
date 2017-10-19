@@ -1,4 +1,33 @@
-@import "http://mutfak.freecluster.eu/vendor/files/global/css/main.css";
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin-ext";
+
+a.navbar-brand {
+  font-family: 'Ubuntu Condensed', sans-serif; }
+
+.navbar {
+  padding: 2px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #f5f5f5; }
+  .footer span.gatilindinho {
+    display: none; }
+
+div.form-group label {
+  font-weight: bold; }
+
+body *:last-child {
+  margin-bottom: 0px; }
+
+.purple-background {
+  background-color: #5e0f6d; }
+
+/*# sourceMappingURL=style.css.map */
+
 div.landing-cover {
   z-index: -10;
   position: fixed;
