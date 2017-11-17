@@ -25,7 +25,7 @@ body *:last-child {
   background-color: #5e0f6d; }
 
 /*# sourceMappingURL=style.css.map */
-
+.float-md-right{float:right;}
 div.landing-cover {
   z-index: -10;
   position: fixed;
