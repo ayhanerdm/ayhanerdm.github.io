@@ -1,0 +1,9 @@
+https://quickchart.io/qr?
+    margin=1&
+    format=SVG&
+    size=400&
+    ecLevel=H&
+    centerImageWidth=50&
+    centerImageHeight=50&
+    centerImageUrl=https://ayhanerdm.github.io/img/logo.png&
+    text=Nothing%20Here%20Yet

@@ -1,0 +1,69 @@
+:root {
+    --dialog-backdrop-color: var(--body-background-color);
+}
+
+dialog, dialog[open], dialog::backdrop {
+    border: unset;
+    background: unset;
+}
+
+dialog {
+    /* animation: fadeOut 3sn; */
+}
+
+dialog[open] {
+    /* animation: fadeIn 1s forwards; */
+}
+
+dialog::backdrop {
+    background-color: var(--dialog-backdrop-color);
+    opacity: .9;
+}
+
+dialog.dialog {
+    div:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    div.dialog-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: unset;
+        }
+
+        a.dialog-close {
+            cursor: pointer;
+            color: var(--body-text-color);
+            font-size: 1.5rem;
+        }
+    }
+}
+
+dialog.dialog.uploader {
+
+    width: 40%;
+
+    div.drop-area {
+        height: 250px;
+        width: 100%;
+        padding: 2rem;
+        background-color: var(--body-text-color);
+        color: var(--body-background-color);
+        text-align: center;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    div.image-preview {
+        background-position: center;
+        background-size: cover;
+        width: 90%;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:not(dialog), *:before:not(dialog), *:after:not(dialog) {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white-smoke: hsl(0, 0%, 98%); /* #fafafa */
+  --ghost-white: hsl(240, 100%, 99%); /* #f8f8ff */
+  --eerie-black: hsl(0, 0%, 11%); /* #1c1c1c */
+  --dark-charcoal: hsl(0, 0%, 20%); /* #333333 */
+  --deep-purple: hsl(270, 96%, 21%); /* #360269 */
+  --blue-violet: hsl(270, 65%, 31%); /* #4F1C82 */
+  --rebecca-purple: hsl(270, 50%, 40%); /* #663399 */
+  --orchid: hsl(313, 70%, 66%); /* #E56DCC */
+  --raspberry-pink: hsl(317, 69%, 59%); /* #DF4FB6 */
+  --medium-violet-red: hsl(322, 82%, 42%); /* #C51383 */
+  --lavender: hsl(240, 67%, 94%); /* #e6e6fa */
+}
+
+:root {
+  --body-font-family: "Work Sans", sans-serif;
+  --selection-background-color: var(--deep-purple);
+  --selection-text-color: var(--body-text-color);
+}
+
+/* Light and dark themes and their variables. */
+:root {
+  color-scheme: light dark;
+  --body-background-color: light-dark(var(--white-smoke), var(--eerie-black)); /* #fafafa, #1c1c1c */
+  --body-text-color: light-dark(var(--eerie-black), var(--white-smoke)); /* #1c1c1c, #fafafa */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --body-background-color: var(--white-smoke); /* #fafafa */
+    --body-text-color: var(--eerie-black); /* #1c1c1c */
+    --footer-bg-color: var(--ghost-white); /* #f8f8ff */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background-color: var(--eerie-black); /* #1c1c1c */
+    --body-text-color: var(--white-smoke); /* #fafafa */
+    --footer-bg-color: var(--dark-charcoal); /* #333333 */
+  }
+}
+body[data-theme=light] {
+  --body-background-color: var(--white-smoke); /* #fafafa */
+  --body-text-color: var(--eerie-black); /* #1c1c1c */
+  --footer-bg-color: var(--ghost-white); /* #f8f8ff */
+}
+
+body[data-theme=dark] {
+  --body-background-color: var(--eerie-black); /* #1c1c1c */
+  --body-text-color: var(--white-smoke); /* #fafafa */
+  --footer-bg-color: var(--dark-charcoal); /* #333333 */
+}
+
+/* Scrollbar and text selection styles. */
+*::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+/* ::-webkit-scrollbar-button {
+    width: 100px;
+    height: 100px;
+} */
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: unset;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: unset;
+}
+
+::-webkit-scrollbar-track:active {
+  background-color: unset;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #500FA5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #500FA5;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #500FA5;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: green;
+}
+
+::selection {
+  background: var(--selection-background-color);
+  color: var(--selection-text-color);
+}
+
+::-moz-selection {
+  background: var(--selection-background-color);
+  color: var(--selection-text-color);
+}
+
+::target-text {
+  background-color: var(--selection-background-color);
+  color: var(--selection-text-color);
+}
+
+/* Interactive elements */
+:root {
+  --dialog-backdrop-color: var(--body-background-color);
+}
+
+dialog, dialog[open], dialog::backdrop {
+  border: unset;
+  background: unset;
+}
+
+dialog {
+  /* animation: fadeOut 3sn; */
+}
+
+dialog[open] {
+  /* animation: fadeIn 1s forwards; */
+}
+
+dialog::backdrop {
+  background-color: var(--dialog-backdrop-color);
+  opacity: 0.9;
+}
+
+dialog.dialog div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+dialog.dialog div.dialog-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+dialog.dialog div.dialog-header h1, dialog.dialog div.dialog-header h2, dialog.dialog div.dialog-header h3, dialog.dialog div.dialog-header h4, dialog.dialog div.dialog-header h5, dialog.dialog div.dialog-header h6 {
+  margin: unset;
+}
+dialog.dialog div.dialog-header a.dialog-close {
+  cursor: pointer;
+  color: var(--body-text-color);
+  font-size: 1.5rem;
+}
+
+dialog.dialog.uploader {
+  width: 40%;
+}
+dialog.dialog.uploader div.drop-area {
+  height: 250px;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--body-text-color);
+  color: var(--body-background-color);
+  text-align: center;
+}
+dialog.dialog.uploader div.drop-area img {
+  width: 100px;
+}
+dialog.dialog.uploader div.image-preview {
+  background-position: center;
+  background-size: cover;
+  width: 90%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+*[popover] {
+  border: unset;
+  background: unset;
+}
+
+/* Forms and related stuff */
+/* Form Styling with Variables */
+:root {
+  --form-bg-color: #f9f9f9;
+  --form-border-color: #ddd;
+  --form-border-radius: 8px;
+  --form-padding: 20px;
+  --form-margin: 20px auto;
+  --form-max-width: 600px;
+  --label-color: #333;
+  --label-font-size: 1rem;
+  --input-bg-color: #fff;
+  --input-border-color: #ccc;
+  --input-border-radius: 4px;
+  --input-padding: 10px;
+  --input-font-size: 1rem;
+  --input-focus-border-color: #007bff;
+  --button-bg-color: #007bff;
+  --button-hover-bg-color: #0056b3;
+  --button-color: #fff;
+  --button-border-radius: 4px;
+  --button-padding: 12px 20px;
+  --button-font-size: 1rem;
+  --error-color: #dc3545;
+  --error-font-size: 0.9rem;
+  --textarea-resize: vertical; /* Allow vertical resizing for textareas */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--label-color);
+  font-size: var(--label-font-size);
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=date],
+input[type=tel],
+input[type=url],
+input[type=search],
+select,
+textarea {
+  width: 100%;
+  padding: var(--input-padding);
+  margin-bottom: 15px;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  background-color: var(--input-bg-color);
+  font-size: var(--input-font-size);
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  resize: var(--textarea-resize); /* Apply the resize property for textareas */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+button[type=submit],
+button[type=reset],
+input[type=submit],
+input[type=reset] {
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type=submit]:hover,
+button[type=reset]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: var(--error-font-size);
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Optional: Styling for checkboxes and radio buttons */
+input[type=checkbox],
+input[type=radio] {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+/* Optional: Styling for fieldsets and legends */
+fieldset {
+  border: 1px solid var(--form-border-color);
+  border-radius: var(--form-border-radius);
+  padding: var(--form-padding);
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+select, ::picker(select) {
+  appearance: base-select;
+}
+
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+select::picker-icon {
+  display: none;
+}
+
+::picker(select) {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+option {
+  padding: 8px 12px;
+}
+
+option:hover {
+  background-color: #e0e0e0;
+}
+
+option::checkmark {
+  display: none;
+}
+
+option:checked {
+  background-color: #007bff;
+  color: white;
+}
+
+selectedcontent {
+  background-color: #007bff;
+  color: white;
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+  font-family: var(--body-font-family);
+}
+body div.container {
+  margin: 0 auto;
+}
+
+pre {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: dashed 1px var(--body-text-color);
+  border-radius: 5px;
+}
+
+a:is(:link, :visited, :hover, :active) {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--body-text-color);
+}
+
+a.navbar-brand {
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+.navbar {
+  padding: 2px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--footer-bg-color);
+}
+
+div.form-group label {
+  font-weight: bold;
+}
+
+body *:last-child {
+  margin-bottom: 0px;
+}
+
+.float-md-right {
+  float: right;
+}
+
+div.landing-cover {
+  z-index: -10;
+  position: fixed;
+  top: 42px;
+  left: 0px;
+  right: 0px;
+  height: 350px;
+  background: var(--deep-purple);
+  color: var(--ghost-white);
+  text-shadow: 0 0 3px var(--dark-charcoal);
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+div.landing-cover div.container {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 680px;
+}
+
+div.landing-cover div.container div.logo h1 {
+  line-height: 80px;
+  font-size: 100px;
+}
+
+div.landing-container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 395px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  height: 60px;
+}
+
+div.landing-container div.form-group {
+  margin: 10px;
+}
+
+div.qr-code {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-image: url("https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|1&chl=Nothing Here Yet");
+}
+
+/*# sourceMappingURL=style.css.map */

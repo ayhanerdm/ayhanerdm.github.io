@@ -1,0 +1,157 @@
+/* Form Styling with Variables */
+
+:root {
+    --form-bg-color: #f9f9f9;
+    --form-border-color: #ddd;
+    --form-border-radius: 8px;
+    --form-padding: 20px;
+    --form-margin: 20px auto;
+    --form-max-width: 600px;
+    --label-color: #333;
+    --label-font-size: 1rem;
+    --input-bg-color: #fff;
+    --input-border-color: #ccc;
+    --input-border-radius: 4px;
+    --input-padding: 10px;
+    --input-font-size: 1rem;
+    --input-focus-border-color: #007bff;
+    --button-bg-color: #007bff;
+    --button-hover-bg-color: #0056b3;
+    --button-color: #fff;
+    --button-border-radius: 4px;
+    --button-padding: 12px 20px;
+    --button-font-size: 1rem;
+    --error-color: #dc3545;
+    --error-font-size: 0.9rem;
+    --textarea-resize: vertical; /* Allow vertical resizing for textareas */
+  }
+  
+  form {
+    
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--label-color);
+    font-size: var(--label-font-size);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  select,
+  textarea {
+    width: 100%;
+    padding: var(--input-padding);
+    margin-bottom: 15px;
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    background-color: var(--input-bg-color);
+    font-size: var(--input-font-size);
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    resize: var(--textarea-resize); /* Apply the resize property for textareas */
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--input-focus-border-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  button[type="submit"],
+  button[type="reset"],
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: var(--button-bg-color);
+    color: var(--button-color);
+    padding: var(--button-padding);
+    border: none;
+    border-radius: var(--button-border-radius);
+    font-size: var(--button-font-size);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="reset"]:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: var(--button-hover-bg-color);
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: var(--error-font-size);
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Optional: Styling for checkboxes and radio buttons */
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Optional: Styling for fieldsets and legends */
+  fieldset {
+    border: 1px solid var(--form-border-color);
+    border-radius: var(--form-border-radius);
+    padding: var(--form-padding);
+    margin-bottom: 20px;
+  }
+  
+  legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+
+  select, ::picker(select) {
+    appearance: base-select;
+}
+
+select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+select::picker-icon {
+    display: none;
+}
+
+::picker(select) {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+option {
+    padding: 8px 12px;
+}
+option:hover {
+    background-color: #e0e0e0;
+}
+option::checkmark {
+    display: none;
+}
+option:checked {
+    background-color: #007bff;
+    color: white;
+}
+selectedcontent {
+    background-color: #007bff;
+    color: white;
+}

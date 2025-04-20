@@ -1,0 +1,20 @@
+{
+  "name": "ayhanerdm.github.io",
+  "version": "1.0.0",
+  "description": "ayhanerdm.github.io page",
+  "homepage": "https://github.com/ayhanerdm/ayhanerdm.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/ayhanerdm/ayhanerdm.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayhanerdm/ayhanerdm.github.io.git"
+  },
+  "license": "ISC",
+  "author": "Ayhan Erdem",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "Sass": "sass --watch src/Sass:src/css"
+  }
+}

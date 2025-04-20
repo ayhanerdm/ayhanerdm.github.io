@@ -1,0 +1,115 @@
+@use '_reset';
+@use '_colors';
+@use '_variables';
+
+/* Light and dark themes and their variables. */
+@use '_light-dark';
+
+/* Scrollbar and text selection styles. */
+@use '_scrollbar';
+@use '_selection';
+
+/* Interactive elements */
+@use '_dialog';
+@use '_popover';
+
+/* Forms and related stuff */
+@use '_form';
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: var(--body-background-color);
+    color: var(--body-text-color);
+    font-family: var(--body-font-family);
+
+    div.container {
+        margin: 0 auto;
+    }
+}
+
+pre {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: dashed 1px var(--body-text-color);
+    border-radius: 5px;
+}
+
+a:is(:link, :visited, :hover, :active) {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--body-text-color);
+}
+
+
+
+
+a.navbar-brand {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.navbar {
+    padding: 2px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--footer-bg-color);
+}
+
+div.form-group label {
+    font-weight: bold;
+}
+
+body *:last-child {
+    margin-bottom: 0px;
+}
+.float-md-right {
+    float:right;
+}
+div.landing-cover {
+    z-index: -10;
+    position: fixed;
+    top: 42px;
+    left: 0px;
+    right: 0px;
+    height: 350px;
+    background: var(--deep-purple);
+    color: var(--ghost-white);
+    text-shadow: 0 0 3px var(--dark-charcoal);
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+div.landing-cover div.container {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 680px;
+}
+div.landing-cover div.container div.logo h1 {
+    line-height: 80px;
+    font-size: 100px;
+}
+
+div.landing-container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 395px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    height: 60px;
+}
+div.landing-container div.form-group {
+    margin: 10px;
+}
+div.qr-code {
+    width: 150px;
+    height: 150px;
+    margin:0 auto;
+    background-image: url("https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|1&chl=Nothing Here Yet");
+}
