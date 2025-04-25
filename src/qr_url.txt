@@ -3,7 +3,9 @@ https://quickchart.io/qr?
     format=SVG&
     size=400&
     ecLevel=H&
-    centerImageWidth=50&
-    centerImageHeight=50&
-    centerImageUrl=https://ayhanerdm.github.io/img/logo.png&
+    centerImageWidth=150&
+    centerImageHeight=150&
+    dark=000000&
+    light=FFFFFF&
+    centerImageUrl=https://ayhanerdm.github.io/src/img/squircle_padding.png&
     text=Nothing%20Here%20Yet

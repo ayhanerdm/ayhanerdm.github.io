@@ -3,4 +3,6 @@
 
     --selection-background-color: var(--deep-purple);
     --selection-text-color: var(--body-text-color);
+
+    --max-width: clamp(300px, 80vw, 1200px);
 }

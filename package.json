@@ -16,5 +16,8 @@
   "main": "index.js",
   "scripts": {
     "Sass": "sass --watch src/Sass:src/css"
+  },
+  "dependencies": {
+    "webtorrent-player": "github:ThaUnknown/webtorrent-player"
   }
 }

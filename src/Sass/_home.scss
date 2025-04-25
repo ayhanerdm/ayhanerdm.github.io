@@ -1,0 +1,56 @@
+div.container.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    gap: 2rem;
+
+    div.avatar {
+        width: 150px;
+        height: 150px;
+        background-image: url("https://gravatar.com/avatar/8968d83ed7ecdfb62abd5d03b28ba34d?size=256&d=https://ayhanerdm.github.io/src/img/logo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 1rem;
+    }
+
+    div.avatar:hover {
+        width: 150px;
+        height: 150px;
+        background-image: url("https://quickchart.io/qr?margin=1&format=SVG&size=400&ecLevel=H&centerImageWidth=150&centerImageHeight=150&dark=000000&light=FFFFFF&centerImageUrl=https://ayhanerdm.github.io/src/img/squircle_padding.png&text=https://ayhanerdm.github.io/");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0rem;
+        transition: all 1s ease-in-out;
+    }
+
+    h1 {
+        font-family: "Ubuntu Condensed", sans-serif;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-family: "Ubuntu Condensed", sans-serif;
+        font-size: 1.5rem;
+        color: #666;
+    }
+
+    p {
+        font-family: "Ubuntu Condensed", sans-serif;
+        font-size: 1rem;
+        color: #666;
+    }
+}
+
+div.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-image: url("https://quickchart.io/qr?margin=1&format=SVG&size=400&ecLevel=H&centerImageWidth=150&centerImageHeight=150&dark=000000&light=FFFFFF&centerImageUrl=https://ayhanerdm.github.io/src/img/squircle_padding.png&text=Nothing%20Here%20Yet");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

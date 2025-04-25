@@ -8,7 +8,7 @@ dialog, dialog[open], dialog::backdrop {
 }
 
 dialog {
-    /* animation: fadeOut 3sn; */
+    transition-behavior: allow-discrete;
 }
 
 dialog[open] {
