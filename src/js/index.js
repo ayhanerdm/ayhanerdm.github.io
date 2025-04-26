@@ -32,10 +32,13 @@ scanButton.addEventListener("click", async () => {
   
   writeButton.addEventListener("click", async () => {
     log("User clicked write button");
+
+    const messageTextarea = document.getElementById("message");
   
     try {
+      
       const ndef = new NDEFReader();
-      await ndef.write("Hello world!");
+      await ndef.write(messageTextarea.value);
       log("> Message written");
     } catch (error) {
       log("Argh! " + error);
