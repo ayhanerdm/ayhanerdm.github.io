@@ -1,3 +1,4 @@
 /Nginx
 /Nginx/Logs
 *.log
+/Nginx
